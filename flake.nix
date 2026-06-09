@@ -2,10 +2,9 @@
   description = "Akeyless DBA workflow Terraform example — provisions MongoDB Atlas dynamic secrets with team-scoped RBAC via Akeyless roles and auth methods";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.follows = "substrate/nixpkgs";
     substrate = {
       url = "github:pleme-io/substrate";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-utils.url = "github:numtide/flake-utils";
   };
